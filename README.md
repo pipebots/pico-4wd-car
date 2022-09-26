@@ -31,18 +31,20 @@ version:
 bash <(curl -s https://thonny.org/installer-for-linux)
 ```
 
-To start Thonny, you can use this command:
+To start Thonny, use this command:
 
 ```bash
 ~/apps/thonny/bin/thonny
 ```
 
-NOTE: The normal `sudo apt install thonny` does not install the latest version.
-It installs the version that is shipped with your distro.  I tried the
+NOTE: The normal `sudo apt install thonny` installs the version that is
+shipped with your distro and not the latest version.  I tried the
 following:
 
 * Ubuntu 16.04 doesn't have Thonny at all and is missing Python 3.
 * Ubuntu 20.04 has a version that predates the Pico board, so is useless.
+
+Hence the instructions to install the latest from a script.
 
 ## Setting up the Pico
 
@@ -58,7 +60,7 @@ it on to the Pico.
 <https://micropython.org/download/rp2-pico/rp2-pico-latest.uf2>
 2. Press and hold down the `BOOTSEL` switch on the Pico and plug the USB lead
     from the Pico into your laptop (two people make this easy!)  The Pico should appear as a new drive.
-3. Copy the `.uf2` file from the Downloads  directory on to the Pico using Windows Explorer (file manager).
+3. Copy the `.uf2` file from the Downloads directory on your PC to the Pico using Windows Explorer (file manager).
 
 ### Ubuntu
 
@@ -73,12 +75,16 @@ it on to the Pico.
 7. Verify that you can communicate with the Pico connecting a serial terminal
     program, e.g. `cutecom`, to `/dev/ttyACM0` and typing some Python
     instructions.
-8. Verify that you can connect to the Pico using Thonny.
-   1. Select the option "Run -> Select Interpreter...".
-   2. In the dialog box, select the "Interpreter" tab.
-   3. Then select the interpreter "MicroPython (Raspberry Pi Pico)".  The
-        "Port" option should automatically be filled out if a Pico is attached.
-   4. Press the "OK" button.
+
+### Verify connection to Thonny
+
+Verify that you can connect to the Pico using Thonny as follows
+
+1. Select the option "Run -> Select Interpreter...".
+2. In the dialog box, select the "Interpreter" tab.
+3. Then select the interpreter "MicroPython (Raspberry Pi Pico)".  The
+     "Port" option should automatically be filled out if a Pico is attached.
+4. Press the "OK" button.
 
 ## Upload libraries
 
@@ -95,9 +101,11 @@ for this bit are pretty good but are out of date with Thonny.
 3. In Thonny, open the files view, View -> Files.  Select the directory
     `pico_4wd_car-main/libs` in the `This computer` window.
 4. Upload the files
+
     * `pico_4wd.py`
     * `pico_rdp.py`
     * `ws.py`
+
    by selecting each file in turn, right button clicking, selecting
    `Upload to /` and wait until the file has been uploaded.
 
