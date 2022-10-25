@@ -3,15 +3,14 @@
 This car is based around a Raspberry Pi Pico (Pico) board.
 See <https://www.amazon.co.uk/SunFounder-Raspberry-MicroPython-Control-Electronic/dp/B09FXM5QW6>
 
-This car was used as an example of a simple vehicle that might form the basis
-of test vehicle for various experiments in pipes.
+This car was used as an example of a simple vehicle that can be used as a test vehicle for various experiments in pipes.
 
 This readme contains info about programming the Pico board.
 
 ## Thonny
 
 Thonny is used as the editor and for transferring files to and from the
-RPi Pico.  The Thonny editor needs to be the latest version.
+RPi Pico.  The Thonny editor needs to be the latest version to work with the Pico board.
 
 ### Windows
 
